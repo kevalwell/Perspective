@@ -4,8 +4,13 @@ get '/expeditionists' do
   erb :'/expeditionist/view_expeditionists'
 end
 
-# get'/expeditionist/:id' do
-#  #this should show expeditionists experiences
-#  @experiences = Experience.find(params[:id])
-#  erb :'/expeditionist/view_expeditionists'
-# end
+get '/expeditionist/:id/experiences' do
+ #this should show expeditionists experiences
+ @experiences = Experience.find_by(params[:id])
+ erb :'/expeditionist/view_expeditionists'
+end
+
+get '/expeditionist/:id/perspective' do
+  @experiences = Experience.where(expeditionist_id: params[:id])
+  erb :'/expeditionist/sole_experience'
+end
