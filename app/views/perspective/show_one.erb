@@ -2,6 +2,14 @@
 <br><br>
 <h3><%= @cur_perspective.title %></h3>
 <p><%= @cur_perspective.content %></p>
+<ul class="comments">
+  <% @cur_perspective.comments.each do |comment| %>
+    <li>
+      <h4><%= comment.title %></h4>
+      <p><%= comment.content %></p>
+    </li>
+    <% end %>
+</ul>
 
 
 
