@@ -3,7 +3,7 @@ class CreateExperiences < ActiveRecord::Migration
     create_table :experiences do |t|
       t.string :title, null: false
       t.string :location, null: false
-      t.refrences :expeditionist
+      t.references :expeditionist
 
       t.timestamps
     end

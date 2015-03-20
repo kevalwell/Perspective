@@ -1,0 +1,3 @@
+get '/perspectives' do
+
+end

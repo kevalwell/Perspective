@@ -4,7 +4,7 @@ class CreatePerspectives < ActiveRecord::Migration
       t.string :title, null: false
       t.text :content, null: false
       t.integer :status, :default => 0
-      t.refrences :experiences
+      t.references :experiences
 
       t.timestamps
     end

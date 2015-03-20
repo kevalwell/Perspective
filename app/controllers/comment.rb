@@ -1,0 +1,3 @@
+get '/comments' do
+
+end

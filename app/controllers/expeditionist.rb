@@ -1,0 +1,3 @@
+get '/expeditionists' do
+
+end
