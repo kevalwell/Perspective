@@ -6,7 +6,7 @@ require 'active_record'
 
 require 'bundler/setup'
 require 'rubygems'
-
+require 'byebug'
 require 'uri'
 require 'pathname'
 

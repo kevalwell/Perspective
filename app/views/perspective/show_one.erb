@@ -12,10 +12,10 @@
     <br>
     <h3>Add a Comment:</h3>
 
-  <form action= '/comments' method='post'>
+  <form action= "/perspective/<%= @cur_perspective.id %>/comments" method='post'>
     <input type='text' placeholder='title' name='title' />
     <input type='text' placeholder='content' name='content' />
-
+<!--     <%# @cur_id = @cur_perspective %> -->
     <input type='submit' value='Add' />
   </form>
 </ul>
