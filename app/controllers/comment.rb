@@ -1,15 +1,16 @@
 get '/comments/new' do
-  erb :'comment/new'
+  erb :'/comment/new'
 end
 
 post '/perspective/:id/comments' do
-  p params
+
+ # @comment = Comment.create(params, perspective_id: params[:id])
   new_comment = Comment.new(title: params[:title],
                             content: params[:content],
-                            perspective: @cur_perspective)
-
+                            perspective: Perspective.find_by(id: params[:id]))
+# byebug
   if new_comment.save
-    redirect "/perspective/#{@cur_perspective.id}" #<<<< how to find current id?
+    redirect "/perspective/#{params[:id]}" #<<<< how to find current id?
   else
     [402, "You did something wrong"]
   end

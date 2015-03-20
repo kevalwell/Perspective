@@ -7,7 +7,7 @@ gem 'shotgun'
 gem 'jasmine'
 gem 'activesupport'
 gem 'activerecord'
-
+gem 'byebug'
 gem 'rake'
 
 gem 'bcrypt'
