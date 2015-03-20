@@ -1,0 +1,24 @@
+<h2><%= @cur_perspective %></h2>
+<br><br>
+<h3><%= @cur_perspective.title %></h3>
+<p><%= @cur_perspective.content %></p>
+<ul class="comments">
+  <% @cur_perspective.comments.each do |comment| %>
+    <li>
+      <h4><%= comment.title %></h4>
+      <p><%= comment.content %></p>
+    </li>
+    <% end %>
+    <br>
+    <h3>Add a Comment:</h3>
+
+  <form action= '/comments' method='post'>
+    <input type='text' placeholder='title' name='title' />
+    <input type='text' placeholder='content' name='content' />
+
+    <input type='submit' value='Add' />
+  </form>
+</ul>
+
+
+
