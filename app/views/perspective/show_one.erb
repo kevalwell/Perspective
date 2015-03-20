@@ -9,6 +9,15 @@
       <p><%= comment.content %></p>
     </li>
     <% end %>
+    <br>
+    <h3>Add a Comment:</h3>
+
+  <form action= '/comments' method='post'>
+    <input type='text' placeholder='title' name='title' />
+    <input type='text' placeholder='content' name='content' />
+
+    <input type='submit' value='Add' />
+  </form>
 </ul>
 
 
