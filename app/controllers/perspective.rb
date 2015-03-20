@@ -1,3 +1,4 @@
+
 get '/perspective/:id' do
   @cur_perspective = Perspective.find_by(id: params[:id])
   if @cur_perspective
@@ -12,3 +13,4 @@ end
 #   @perspective = Perspective.create(params)
 #   redirect "/perspective/#{@perspective.id}"
 # end
+

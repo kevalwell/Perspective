@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <%@experiences.each do |exp|%>
+  <li class="list-group-item"><a href='/perspective/<%=exp.id%>'><%=exp.title%></li>
+ <%end%>
+</ul>
