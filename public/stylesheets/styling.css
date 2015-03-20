@@ -1,0 +1,11 @@
+
+.item img{
+  width: 900px;
+  height: 900px;
+  text-align: center;
+  position: relative;
+}
+
+#search_bar {
+  text-align: center;
+}
