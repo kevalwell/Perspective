@@ -1,6 +1,11 @@
-# get '/perspective/:id' do
-#   #this should show single perspective title and content & comments
-# end
+get '/perspective/:id' do
+  @cur_perspective = Perspective.find_by(id: params[:id])
+  if @cur_perspective
+    erb :'perspective/show_one'
+  else
+    [404, "no perspective found"]
+  end
+end
 
 # post '/perspective/:id/new' do
 #   #this will create new perspective
