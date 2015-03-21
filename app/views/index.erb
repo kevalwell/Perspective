@@ -1,18 +1,3 @@
-<!-- <div id='container'>
-  <h1 id='header'> Perspective </h1>
-  <div id='view_plate'>
-    <table>
-      <td><a href'/experiences'>Experiences</a></td>
-      <td><a href'/expeditionists'>Expeditionists</a></td>
-    </table>
-  </div>
-      <form action="/experience/:id" method="post">
-        Enter to find Experience:
-        <br>
-        <input type="text" name="title" placeholder="Experience Title">
-        <input type="submit" value="Search it!">
-      </form>
- </div> -->
 <!-- bootstrap -->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -24,13 +9,13 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <center><img src="http://images4.fanpop.com/image/photos/22600000/Fall-beautiful-nature-22666764-900-562.jpg" alt="Enjoy the Experience of Expeditionists across the World"></center>
+      <center><a href='/experiences'><img src="http://images4.fanpop.com/image/photos/22600000/Fall-beautiful-nature-22666764-900-562.jpg" alt="Enjoy the Experience of Expeditionists across the World"></a></center>
       <div class="carousel-caption">
         Percieve and Believe
       </div>
     </div>
     <div class="item">
-      <center><img src="http://www.99holidays.com/uploads/1373971587bangkok_0.jpg" alt=""></center>
+      <center><a href='/expeditionists'><img src="http://www.99holidays.com/uploads/1373971587bangkok_0.jpg" alt=""></a></center>
       <div class="carousel-caption">
         Expeditionist
       </div>
@@ -48,10 +33,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
- <div id='search_bar'>
-      <form action="/experience/:id" method="post">
 
-        <br>
+ <div id='search_bar'>
+      <form action="/perspective/search" method="get">
+
         <input type="text" name="title" placeholder="Experience">
         <input type="submit" value="Search it!">
       </form>
