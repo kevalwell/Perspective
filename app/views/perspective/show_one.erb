@@ -1,31 +1,29 @@
-<h2><% @cur_perspective %></h2>
-<br><br>
-<h3><%= @cur_perspective.title %></h3>
+<a class="btn btn-primary" href="/perspective/new" role="button">Share Perspective</a>
+<h2><%= @cur_perspective.title %></h2>
 <p><%= @cur_perspective.content %></p>
 <ul class="comments">
   <% @cur_perspective.comments.each do |comment| %>
     <li>
       <h4><%= comment.title %></h4>
       <p><%= comment.content %></p>
-        <form action= "/perspective/<%= @cur_perspective.id %>/comment/<%= comment.id %>" method='post'>
-          <input type='hidden' name='_method' value='delete' />
-          <input type='submit' value='Delete' />
-        </form>
-
- <!--        <form action= "/perspective/<%= @cur_perspective.id %>/comment/<%= comment.id %>" method='get'>
-          <input type='submit' value='Edit' />
-        </form> -->
-        <a href="/comment/<%= comment.id %>">Edit</a>
+        <div style="display: inline-block;">
+          <a class="btn btn-info btn-xs" href="/comment/<%= comment.id %>" role="button">Edit</a>
+        </div>
+        <div style="display: inline-block;">
+          <form action= "/perspective/<%= @cur_perspective.id %>/comment/<%= comment.id %>" method='post'>
+            <input type='hidden' name='_method' value='delete' />
+            <button type="submit" class="btn btn-danger btn-xs">Delete</button>
+          </form>
+        </div>
     </li>
     <% end %>
     <br>
-    <p><a href="/perspective/new">Share Perspective</a>
 
     <h3>Add a Comment:</h3>
 
   <form action= "/perspective/<%= @cur_perspective.id %>/comments" method='post'>
-    <input type='text' placeholder='title' name='title' />
-    <input type='text' placeholder='content' name='content' />
+    <input type='text' placeholder='title' name='title' /><br><br>
+    <textarea cols="30" rows="5" placeholder='content' name='content'></textarea><br>
 
     <input type='submit' value='Add' />
   </form>
