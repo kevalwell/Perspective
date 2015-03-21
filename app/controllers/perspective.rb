@@ -1,3 +1,10 @@
+get '/perspective/search' do
+
+  title = params[:title]
+  @perspective = Perspective.find_by(title:title)
+
+  redirect "/perspective/#{@perspective.id}"
+end
 
 get '/perspective/:id' do
   @cur_perspective = Perspective.find_by(id: params[:id])
@@ -7,6 +14,8 @@ get '/perspective/:id' do
     [404, "no perspective found"]
   end
 end
+
+
 
 # post '/perspective/:id/new' do
 #   #this will create new perspective
