@@ -7,6 +7,10 @@
     <li>
       <h4><%= comment.title %></h4>
       <p><%= comment.content %></p>
+        <form action= "/perspective/<%= @cur_perspective.id %>/comment/<%= comment.id %>" method='post'>
+          <input type='hidden' name='_method' value='delete' />
+          <input type='submit' value='Delete' />
+        </form>
     </li>
     <% end %>
     <br>
@@ -15,7 +19,7 @@
   <form action= "/perspective/<%= @cur_perspective.id %>/comments" method='post'>
     <input type='text' placeholder='title' name='title' />
     <input type='text' placeholder='content' name='content' />
-<!--     <%# @cur_id = @cur_perspective %> -->
+
     <input type='submit' value='Add' />
   </form>
 </ul>
