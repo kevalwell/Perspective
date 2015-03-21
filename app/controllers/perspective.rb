@@ -12,3 +12,9 @@ end
 #   @perspective = Perspective.create(params)
 #   redirect "/perspective/#{@perspective.id}"
 # end
+
+  # <!-- <form action= "/perspective/<%= #@cur_perspective.id %>/comment/<%= comment.id %>" method='post'>
+  #         <input type='hidden' name='_method' value='delete' />
+  #         <input type='text' placeholder='content' name='content' />
+  #         <input type='submit' value='Delete' />
+  #       </form> -->
