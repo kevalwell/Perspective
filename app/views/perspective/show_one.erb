@@ -1,24 +1,26 @@
-<h2><% @cur_perspective %></h2>
+<div id='container'><h2><% @cur_perspective %></h2>
 <br><br>
 <h3><%= @cur_perspective.title %></h3>
 <p><%= @cur_perspective.content %></p>
-<ul class="comments">
+<table class="comments">
   <% @cur_perspective.comments.each do |comment| %>
-    <li>
-      <h4><%= comment.title %></h4>
-      <p><%= comment.content %></p>
-    </li>
+    <td>
+      <tr><h4><%= comment.title %></h4></tr>
+      <tr><p><%= comment.content %></p></tr>
+    </td>
     <% end %>
     <br>
-    <h3>Add a Comment:</h3>
+    </div>
+</table>
 
+<h3>Add a Comment:</h3>
   <form action= "/perspective/<%= @cur_perspective.id %>/comments" method='post'>
     <input type='text' placeholder='title' name='title' />
     <input type='text' placeholder='content' name='content' />
 <!--     <%# @cur_id = @cur_perspective %> -->
     <input type='submit' value='Add' />
   </form>
-</ul>
+
 
 
 
