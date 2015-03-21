@@ -6,6 +6,7 @@ end
 
 get '/experience/:id' do
   # this should show single experience by id
-  @experience = Experience.find_by(params[:id])
+  @experience = Experience.where(params[:id])
   erb :"/experience/view_experience"
 end
+
