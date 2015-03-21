@@ -6,6 +6,10 @@ get '/perspective/search' do
   redirect "/perspective/#{@perspective.id}"
 end
 
+get '/perspective/new' do
+  erb :'perspective/new'
+end
+
 get '/perspective/:id' do
   @cur_perspective = Perspective.find_by(id: params[:id])
   if @cur_perspective
@@ -17,11 +21,18 @@ end
 
 
 
-# post '/perspective/:id/new' do
-#   #this will create new perspective
-#   @perspective = Perspective.create(params)
-#   redirect "/perspective/#{@perspective.id}"
-# end
+post '/perspective/new' do
+  #this will create new perspective
+  # byebug
+   new_perspective = Perspective.new(title: params[:title],
+                                     content: params[:content],
+                                     experience: Experience.find_by(id: params[:id]))
+  if new_perspective.save
+    redirect "/perspective/#{new_perspective.id}"
+  else
+    [402, "boned again"]
+  end
+end
 
 
   # <!-- <form action= "/perspective/<%= #@cur_perspective.id %>/comment/<%= comment.id %>" method='post'>
