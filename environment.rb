@@ -3,7 +3,7 @@
 require 'sinatra'
 require 'pg'
 require 'active_record'
-
+require 'faker'
 require 'bundler/setup'
 require 'rubygems'
 require 'byebug'

@@ -9,7 +9,7 @@ gem 'activesupport'
 gem 'activerecord'
 gem 'byebug'
 gem 'rake'
-
+gem 'faker'
 gem 'bcrypt'
 
 group :test do
