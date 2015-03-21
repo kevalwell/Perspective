@@ -11,6 +11,11 @@
           <input type='hidden' name='_method' value='delete' />
           <input type='submit' value='Delete' />
         </form>
+
+ <!--        <form action= "/perspective/<%= @cur_perspective.id %>/comment/<%= comment.id %>" method='get'>
+          <input type='submit' value='Edit' />
+        </form> -->
+        <a href="/comment/<%= comment.id %>">Edit</a>
     </li>
     <% end %>
     <br>
