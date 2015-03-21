@@ -1,11 +1,18 @@
-<h3>Add a Perspective:</h3>
+<div class="list-group">
+<h1>Share Perspective:</h1>
+<hr>
 <form action= '/perspective/new' method='post'>
-  <input type='text' placeholder='title' name='title' /><br><hr>
+  <input type='text' size="100" placeholder='title' name='title' /><br><br>
   <textarea cols="100" rows="20" placeholder='content' name='content' ></textarea><br><br>
+  <p>Experience:</p>
   <select name="mydropdown">
     <%Experience.all.each do |exp|%>
     <option value="<%exp%>"><%=exp.title%></option>
     <%end%>
 
-  <input type='submit' value='Add' />
+  </select>
+  <br>
+  <br>
+  <input type='submit' value='Share' />
 </form>
+</div>

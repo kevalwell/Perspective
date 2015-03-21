@@ -14,4 +14,3 @@ get '/experience/:id/perspectives' do
   @perspectives = Perspective.where(experience_id: params[:id])
   erb :'perspective/show_all'
 end
-
