@@ -31,4 +31,19 @@
   text-align: center;
 }
 
+#perspective_list {
+  width: 75%;
+  margin: auto;
+}
 
+#home_button {
+  position: fixed;
+  top: 1px;
+  right: 5px;
+  background-color: rgb(115, 120, 178);
+  border-color: rgb(115, 120, 178);
+}
+
+.list-group-item {
+  background-color: rgb(186, 186, 186);
+}

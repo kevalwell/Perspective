@@ -19,16 +19,7 @@ get '/perspective/:id' do
   end
 end
 
-get '/experience/:id/perspectives' do
-  @perspectives = Perspective.where(experience_id: params[:id])
-  erb :'perspective/show_all'
-end
-
-
-
 post '/perspective/new' do
-  #this will create new perspective
-  # byebug
    new_perspective = Perspective.new(title: params[:title],
                                      content: params[:content],
                                      experience: Experience.find_by(id: params[:id]))
