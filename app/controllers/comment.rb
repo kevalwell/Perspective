@@ -23,7 +23,6 @@ end
 put '/comment/:id' do
   cur_comment = Comment.find_by(id: params[:id])
   perspective_id = cur_comment.perspective_id
-
   if cur_comment
     cur_comment.title = params[:title]
     cur_comment.content = params[:content]
