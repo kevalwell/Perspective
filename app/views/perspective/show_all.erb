@@ -1,0 +1,5 @@
+<ul class="list-group">
+<% @perspectives.each do |perspective| %>
+<li class="list-group-item"><a href='/perspective/<%=perspective.id%>'><%= perspective.title %></a></li>
+<% end%>
+</ul>
