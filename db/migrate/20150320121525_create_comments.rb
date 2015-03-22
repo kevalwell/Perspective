@@ -5,7 +5,7 @@ class CreateComments < ActiveRecord::Migration
       t.string :content, null: false
       t.references :perspective
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

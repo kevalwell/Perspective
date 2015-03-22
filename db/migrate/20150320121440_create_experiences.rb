@@ -5,7 +5,7 @@ class CreateExperiences < ActiveRecord::Migration
       t.string :location, null: false
       t.references :expeditionist
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

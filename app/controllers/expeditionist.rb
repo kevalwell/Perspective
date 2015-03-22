@@ -11,6 +11,7 @@ get '/expeditionist/:id/experiences' do
 end
 
 get '/expeditionist/:id/perspective' do
+  @perspectives = Perspective.where(expeditionist_id: params[:id])
   @experiences = Experience.where(expeditionist_id: params[:id])
   erb :'/expeditionist/sole_experience'
 end
