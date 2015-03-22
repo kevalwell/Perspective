@@ -1,15 +1,14 @@
 <div class="list-group">
 <h1>Share Perspective:</h1>
 <hr>
-<form action= '/perspective/new' method='post'>
+<form action= '/experience/<%= @cur_experience_id %>/perspectives' method='post'>
   <input type='text' size="100" placeholder='title' name='title' /><br><br>
   <textarea cols="100" rows="20" placeholder='content' name='content' ></textarea><br><br>
   <p>Experience:</p>
-  <select name="mydropdown">
+  <select name="experience">
     <%Experience.all.each do |exp|%>
-    <option value="<%exp%>"><%=exp.title%></option>
+      <option value="<%exp.id%>"><%=exp.title%></option>
     <%end%>
-
   </select>
   <br>
   <br>

@@ -4,13 +4,14 @@ get '/experiences' do
   erb :'/experience/experiences'
 end
 
+get '/experience/:id/perspectives' do
+  @perspectives = Perspective.where(experience_id: params[:id])
+  erb :'perspective/show_all'
+end
+
 get '/experience/:id' do
   # this should show single experience by id
   @experience = Experience.where(params[:id])
   erb :"/experience/view_experience"
 end
 
-get '/experience/:id/perspectives' do
-  @perspectives = Perspective.where(experience_id: params[:id])
-  erb :'perspective/show_all'
-end
