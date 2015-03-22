@@ -6,11 +6,12 @@ get '/perspective/search' do
   redirect "/perspective/#{@perspective.id}"
 end
 
-get '/perspective/new' do
+get '/experience/:id/perspective/new' do
+  @cur_experience_id = params[:id]
   erb :'perspective/new'
 end
 
-get '/perspective/:id' do
+get '/perspective/:id' do #experience/:id
   @cur_perspective = Perspective.find_by(id: params[:id])
   if @cur_perspective
     erb :'perspective/show_one'
@@ -19,12 +20,12 @@ get '/perspective/:id' do
   end
 end
 
-post '/perspective/new' do
+post '/experience/:id/perspectives' do
    new_perspective = Perspective.new(title: params[:title],
                                      content: params[:content],
                                      experience: Experience.find_by(id: params[:id]))
   if new_perspective.save
-    redirect "/perspective/#{new_perspective.id}"
+    redirect "/experience/#{params[:id]}/perspectives"
   else
     [402, "boned again"]
   end
