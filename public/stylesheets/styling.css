@@ -47,3 +47,28 @@
 .list-group-item {
   background-color: rgb(186, 186, 186);
 }
+
+form    {
+  text-align: center;
+background: (bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+background: (bottom, #CCCCCC, #EEEEEE 175px);
+margin:auto;
+position:relative;
+
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 14px;
+font-style: italic;
+line-height: 24px;
+font-weight: bold;
+color: #09C;
+text-decoration: none;
+border-radius: 10px;
+border-radius: 10px;
+border-radius: 10px;
+padding:10px;
+
+border: inset 1px solid #333;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
