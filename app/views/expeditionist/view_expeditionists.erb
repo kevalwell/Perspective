@@ -1,8 +1,10 @@
+<!-- add a image_url field on your expeditioinsts model --> 
 
 <%@expeditionists.each do |expeditionist|%>
 <div class="row">
   <div class="col-md-12">
     <div class="thumbnail">
+      <!-- ZM: Try not to use remote photos' -->
       <img src="http://sr.photos3.fotosearch.com/bthumb/CSP/CSP968/k9681355.jpg" alt="...">
       <div class="caption">
         <h3><%=expeditionist.name%></h3>

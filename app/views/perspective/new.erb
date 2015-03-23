@@ -6,6 +6,7 @@
   <textarea cols="100" rows="20" placeholder='content' name='content' ></textarea><br><br>
   <p>Experience:</p>
   <select name="experience">
+    <!-- ZM: move this query into the controller -->
     <%Experience.all.each do |exp|%>
       <option value="<%exp.id%>"><%=exp.title%></option>
     <%end%>

@@ -6,6 +6,7 @@ class CreatePerspectives < ActiveRecord::Migration
       t.integer :status, :default => 0
       t.references :experience
 
+      #ZM: timestamps must have constratins
       t.timestamps
     end
   end

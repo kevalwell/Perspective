@@ -4,6 +4,8 @@ describe 'Comment' do
   it 'should bring render form to create new comment' do
     get '/comment/new'
     expect(last_response).to be_ok
+    #ZM: what else are you expecting out of this? 
+    # look at the response body to check for correctness
   end
 
   it 'should create a comment' do

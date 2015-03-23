@@ -8,6 +8,7 @@ end
 
 get '/experience/:id/perspective/new' do
   @cur_experience_id = params[:id]
+  #@exp = Exp.all
   erb :'perspective/new'
 end
 

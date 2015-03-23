@@ -1,3 +1,13 @@
+#ZM: this file could be a lot more dry... look into loops and using faker
+
+
+#user = User.create
+#
+#comments = []
+#(0..199).each( comments << Comment.new())
+#
+#user.comments = comments
+#user.save
 
 exp1 = Expeditionist.create(name: 'Sir Charles Waldorf', niche: 'Master Sommlier')
 exp2 = Expeditionist.create(name: 'Travis Abels', niche: 'Adrenaline Junkie')
